@@ -7,7 +7,7 @@ body {
   background-color: hsl(0, 0%, 90%);
 }
 
-.calculator {
+#calculator {
   font-family: Arial, sans-serif;
   background-color: hsl(0, 0%, 15%);
   border-radius: 15px;
@@ -15,7 +15,7 @@ body {
   overflow: hidden;
 }
 
-.display {
+#display {
   border: none;
   width: 100%;
   padding: 20px;
@@ -25,7 +25,7 @@ body {
   color: white;
 }
 
-.keys {
+#keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
