@@ -1,5 +1,5 @@
 for (let i = 1; i <= 10; i++) {
-  document.getElementById("result").innerHTML = i + " * 2 is " + i * 2;
+  console.log(i + " * 2 is " + i * 2);
 }
 
 let sum = 0;
@@ -11,7 +11,7 @@ console.log("the sum from 1 to 10 is " + sum);
 
 for (let i = 1; i <= 10; i++) {
   if (i < 10) {
-    console.log("");
+    console.log();
   } else {
     console.log("the sum from 1 to 10 is " + (i * (i + 1)) / 2);
   }
@@ -19,7 +19,6 @@ for (let i = 1; i <= 10; i++) {
 
 const calculate = document.getElementById("calculate");
 calculate.addEventListener("click", calculateSum);
-const search = document.querySelector(".search").value;
 
 function calculateSum() {
   let input = document.getElementById("search").value;
