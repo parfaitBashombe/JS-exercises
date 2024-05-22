@@ -93,7 +93,7 @@ var myDog = {
   name: "Kurama",
   legs: 4,
   tails: 9,
-  friends: ["Hikaku !"],
+  friends: ["Hikaku !", "shukaku", "jinkaku", "matataku"],
 };
 
 myDog["bark"] = "wuw wuw !";
@@ -120,11 +120,13 @@ console.log(morse("bravo"));
 
 //check if obj has property
 function checkObj(checkProp) {
-  if (myDog.hasOwnProperty(checkProp)) {
-    return myDog[checkProp];
+  if (myDog.friends.hasOwnProperty(checkProp)) {
+    return myDog.friends[checkProp];
   } else {
     return "not found";
   }
 }
 
-console.log(checkObj("legs"));
+console.log(checkObj(myDog.friends[2]));
+
+console.log(myDog.friends[2]);
