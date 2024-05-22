@@ -35,4 +35,27 @@ function abtest(a, b) {
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-console.log(abtest(2, 2));
+console.log(abtest(2, 3));
+
+let count = 0;
+
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+
+  return count + " " + holdbet;
+}
