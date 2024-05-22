@@ -14,6 +14,14 @@ function getAnswer(val) {
     case 4:
       answer = "gama";
       break;
+    case 5:
+    case 6:
+    case 7:
+      answer = "delta";
+      break;
+    default:
+      answer = "Don't Know";
+      break;
   }
 
   return answer;
