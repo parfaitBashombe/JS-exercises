@@ -39,7 +39,9 @@ function beast() {
     x = beastList[7];
   } else if (input == 9) {
     x = beastList[8];
+  } else {
+    x = "Please enter a number between 1 and 9 !";
   }
 
-  result.innerHTML = x;
+  result.innerHTML = x + ", and it has " + input + " tail(s).";
 }
