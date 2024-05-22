@@ -98,6 +98,7 @@ var myDog = {
 
 myDog["bark"] = "wuw wuw !";
 
+//morse alphabet
 function morse(val) {
   let result = "";
 
@@ -115,4 +116,15 @@ function morse(val) {
   return result;
 }
 
-console.log(morse(alpha));
+console.log(morse("bravo"));
+
+//check if obj has property
+function checkObj(checkProp) {
+  if (myDog.hasOwnProperty(checkProp)) {
+    return myDog[checkProp];
+  } else {
+    return "not found";
+  }
+}
+
+console.log(checkObj("legs"));
