@@ -93,7 +93,17 @@ var myDog = {
   name: "Kurama",
   legs: 4,
   tails: 9,
-  friends: ["Hikaku !", "shukaku", "jinkaku", "matataku"],
+  friends: [
+    "Shukaku !",
+    "Matatabi !",
+    "Isobu !",
+    "Son goku !",
+    "Kokuo !",
+    "Saiken !",
+    "Chomei !",
+    "Giyuki !",
+    "Kurama !",
+  ],
 };
 
 myDog["bark"] = "wuw wuw !";
@@ -120,13 +130,79 @@ console.log(morse("bravo"));
 
 //check if obj has property
 function checkObj(checkProp) {
-  if (myDog.friends.hasOwnProperty(checkProp)) {
-    return myDog.friends[checkProp];
+  if (myDog.hasOwnProperty(checkProp)) {
+    return myDog[checkProp];
   } else {
     return "not found";
   }
 }
 
-console.log(checkObj(myDog.friends[2]));
+console.log(checkObj("tails"));
 
-console.log(myDog.friends[2]);
+//check if obj has property
+function checkArr(checkEl) {
+  if (myDog.friends.includes("Shukaku !")) {
+    return myDog.friends[checkEl];
+  } else {
+    return "not found";
+  }
+}
+
+console.log(checkArr("8"));
+
+//tail beasts
+const click = document.getElementById("click");
+click.addEventListener("click", beast);
+
+function beast() {
+  let search = document.getElementById("search").value;
+  let beast = [
+    "Shukaku !",
+    "Matatabi !",
+    "Isobu !",
+    "Son goku !",
+    "Kokuo !",
+    "Saiken !",
+    "Chomei !",
+    "Giyuki !",
+    "Kurama !",
+  ];
+
+  let result = "";
+  switch (search) {
+    case 1:
+      result = beast[0];
+      break;
+    case 2:
+      result = beast[1];
+      break;
+    case 3:
+      result = beast[2];
+      break;
+    case 4:
+      result = beast[3];
+      break;
+    case 5:
+      result = beast[4];
+      break;
+    case 6:
+      result = beast[5];
+      break;
+    case 7:
+      result = beast[6];
+      break;
+    case 8:
+      result = beast[7];
+      break;
+    case 9:
+      result = beast[8];
+      break;
+    default:
+      result = "please enter a correct number";
+      break;
+  }
+
+  return result;
+
+  document.getElementById("get").innerHTML = beast[result] + " has" + search;
+}
