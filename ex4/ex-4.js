@@ -1,3 +1,4 @@
+//which type of men are you ?
 function getAnswer(val) {
   let answer = "";
 
@@ -28,6 +29,8 @@ function getAnswer(val) {
 }
 console.log(getAnswer(3));
 
+//test and give the exponent value
+
 function abtest(a, b) {
   if (a < 0 || b < 0) {
     return undefined;
@@ -36,6 +39,8 @@ function abtest(a, b) {
 }
 
 console.log(abtest(2, 3));
+
+//count the cards
 
 let count = 0;
 
@@ -57,5 +62,28 @@ function cc(card) {
       break;
   }
 
+  let holdbet = "hold";
+
+  if (count > 0) {
+    holdbet = "bet";
+  }
+
   return count + " " + holdbet;
 }
+
+cc(2);
+cc("K");
+cc(10);
+cc("K");
+cc("A");
+console.log(cc(4));
+
+//my dog characteristics
+let ourDog = {
+  name: "max",
+  legs: 4,
+  tails: 1,
+  friends: ["everything !"],
+};
+
+var myDog = {};
