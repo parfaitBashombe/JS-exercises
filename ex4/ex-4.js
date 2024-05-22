@@ -79,11 +79,40 @@ cc("A");
 console.log(cc(4));
 
 //my dog characteristics
-let ourDog = {
-  name: "max",
+var ourDog = {
+  name: "quincy",
   legs: 4,
   tails: 1,
   friends: ["everything !"],
 };
 
-var myDog = {};
+ourDog.bark = "wow wow";
+delete ourDog.friends;
+
+var myDog = {
+  name: "Kurama",
+  legs: 4,
+  tails: 9,
+  friends: ["Hikaku !"],
+};
+
+myDog["bark"] = "wuw wuw !";
+
+function morse(val) {
+  let result = "";
+
+  var lookup = {
+    alpha: "adams",
+    bravo: "boston",
+    charlie: "chicago",
+    delta: "denver",
+    echo: "easy",
+    foxtrot: "frank",
+  };
+
+  result = lookup[val];
+
+  return result;
+}
+
+console.log(morse(alpha));
