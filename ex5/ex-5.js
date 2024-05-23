@@ -4,4 +4,4 @@ dor = {
   eyes: 3,
 };
 
-console.log(dor.tails[0]);
+document.getElementById("get").innerHTML = dor.tails[0];
