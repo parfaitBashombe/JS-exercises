@@ -15,7 +15,23 @@ click.addEventListener("click", delet);
 
 function delet() {
   let x = document.getElementById("js").innerHTML;
-  result = x.length;
-
+  result = x.slice(0, -1);
   document.getElementById("js").innerHTML = result;
+
+  console.log(x[0]);
 }
+
+//block buster movie
+
+const isBigHit = true;
+const isNew = true;
+const hasAwards = false;
+const canHaveSequel = true;
+const isRatedX = false;
+
+const isBlockBuster =
+  isBigHit && isNew && (hasAwards || canHaveSequel) && !isRatedX; // ?
+
+//
+
+console.log(`The movie is a blockbuster: ${isBlockBuster}`);
