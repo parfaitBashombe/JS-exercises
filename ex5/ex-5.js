@@ -4,4 +4,18 @@ dor = {
   eyes: 3,
 };
 
-document.getElementById("get").innerHTML = dor.tails[0];
+console.log(dor.tails[0]);
+
+document.getElementById("get").innerHTML = JSON.parse(
+  JSON.stringify(dor.tails)
+);
+
+const click = document.getElementById("click");
+click.addEventListener("click", delet);
+
+function delet() {
+  let x = document.getElementById("js").innerHTML;
+  result = x.length;
+
+  document.getElementById("js").innerHTML = result;
+}
