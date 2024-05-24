@@ -1,17 +1,17 @@
 let count = 1;
-total = 0;
+total = 1;
 
-while (count <= 10) {
-  total += count;
+while (count <= 5) {
+  total *= count;
   count++;
 }
+count--;
 
-console.log(total);
+console.log(`the factorial of ${count} is ${total}`);
 
 function factorial(n) {
-  let result = 1;
   if (n == 0) {
-    return result;
+    return 1;
   } else {
     return n * factorial(n - 1);
   }
