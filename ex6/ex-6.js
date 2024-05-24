@@ -17,11 +17,28 @@ function factorial(n) {
   }
 }
 
-const num = prompt("enter a positive number :");
+console.log(factorial(5));
 
-if (num >= 0) {
-  const result = factorial(num);
-  console.log(`the factorial of ${num} is ${result}`);
-} else {
-  console.log("enter a positive number.");
+const click = document.getElementById("click");
+click.addEventListener("click", fact);
+
+function fact() {
+  const num = document.getElementById("search").value;
+
+  if (num >= 0) {
+    const result = factorial(num);
+    document.getElementById(
+      "get"
+    ).innerHTML = `the factorial of ${num} is ${result}`;
+  } else {
+    document.getElementById("get").innerHTML = "enter a positive number.";
+  }
+}
+
+const delet = document.getElementById("delete");
+delet.addEventListener("click", suppr);
+
+function suppr() {
+  document.getElementById("search").value = "";
+  document.getElementById("get").innerHTML = "";
 }
