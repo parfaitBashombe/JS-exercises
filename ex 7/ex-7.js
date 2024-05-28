@@ -7,4 +7,6 @@ function outer(x) {
 
 const outerReturn = outer(10);
 
+console.log(outerReturn);
+
 console.log(outerReturn(2));
