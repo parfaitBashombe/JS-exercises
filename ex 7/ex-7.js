@@ -34,7 +34,7 @@ const count = 15;
 const rows = [];
 
 for (let i = 0; i < count; i++) {
-  rows.push(character.repeat(i));
+  rows.push(character.repeat(i + 1));
 }
 
 let result = "";
@@ -43,3 +43,9 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+function padRow() {
+  return (p = "Hello world");
+}
+let call = padRow();
+console.log(call);
