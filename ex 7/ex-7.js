@@ -8,6 +8,22 @@ function outer(x) {
   return inner;
 }
 
-const outerReturn = outer(10);
-const innerReturn = outerReturn(2);
-console.log(innerReturn(8));
+const outerReturn = outer(10)(2)(8);
+
+console.log(outerReturn);
+
+function bar() {
+  console.log("hello....");
+}
+
+function add() {
+  console.log(11 + 4);
+}
+
+function foo(bar) {
+  bar();
+}
+
+foo(add);
+
+foo(bar);
