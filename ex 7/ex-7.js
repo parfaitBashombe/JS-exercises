@@ -30,16 +30,16 @@ foo(bar);
 
 //pyramid
 const character = "#";
-const count = 8;
+const count = 15;
 const rows = [];
 
-for (let i = 0; i < count; i = i + 1) {
-  rows.push(i);
+for (let i = 0; i < count; i++) {
+  rows.push(character.repeat(i));
 }
 
 let result = "";
 for (const row of rows) {
-  result += row;
+  result += "\n" + row;
 }
 
 console.log(result);
