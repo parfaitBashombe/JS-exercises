@@ -33,8 +33,16 @@ const character = "#";
 const count = 15;
 const rows = [];
 
+function padRow(rowNumber, rowCount) {
+  return (
+    " ".repeat(rowCount - rowNumber) +
+    character.repeat(rowNumber) +
+    " ".repeat(rowCount - rowNumber)
+  );
+}
+
 for (let i = 0; i < count; i++) {
-  rows.push(padRow(i++, count));
+  rows.push(padRow(i, count));
 }
 
 let result = "";
@@ -43,7 +51,3 @@ for (const row of rows) {
 }
 
 console.log(result);
-
-function padRow(rowNumber, rowCount) {
-  return character.repeat(rowNumber);
-}
