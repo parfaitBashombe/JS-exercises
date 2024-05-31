@@ -34,7 +34,7 @@ const count = 15;
 const rows = [];
 
 for (let i = 0; i < count; i++) {
-  rows.push(padRow());
+  rows.push(padRow(i++, count));
 }
 
 let result = "";
