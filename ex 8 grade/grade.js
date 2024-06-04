@@ -23,3 +23,10 @@ function getGrade(input) {
 }
 
 getGrade();
+let N = 5;
+
+for (i = 1; i <= N; i++) {
+  for (j = 1; j <= N; j = j * 2) {
+    console.log("hello");
+  }
+}
