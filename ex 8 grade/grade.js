@@ -17,10 +17,9 @@ function getGrade(input) {
     grade = "D";
   } else if (input >= 1 && input <= 59) {
     grade = "F";
-  } else {
   }
   return (document.getElementById("result").innerHTML =
-    "This student has obtained a " + grade + " grade");
+    input + " is a " + grade + " grade");
 }
 
 getGrade();
