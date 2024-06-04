@@ -1,22 +1,26 @@
 // grade
-function getGrade(score) {
+const click = document.getElementById("click");
+click.addEventListener("click", getGrade);
+
+function getGrade(input) {
+  input = document.getElementById("get").value;
   let grade = "";
-  if (score === 100) {
+  if (input == 100) {
     grade = "A++";
-  } else if (score >= 90 && score <= 99) {
+  } else if (input >= 90 && input <= 99) {
     grade = "A";
-  } else if (score >= 80 && score <= 89) {
+  } else if (input >= 80 && input <= 89) {
     grade = "B";
-  } else if (score >= 70 && score <= 79) {
+  } else if (input >= 70 && input <= 79) {
     grade = "C";
-  } else if (score >= 60 && score <= 69) {
+  } else if (input >= 60 && input <= 69) {
     grade = "D";
-  } else if (score >= 0 && score <= 59) {
+  } else if (input >= 1 && input <= 59) {
     grade = "F";
+  } else {
   }
-  return grade;
+  return (document.getElementById("result").innerHTML =
+    "This student has obtained a " + grade + " grade");
 }
 
-console.log(getGrade(96));
-console.log(getGrade(82));
-console.log(getGrade(56));
+getGrade();
