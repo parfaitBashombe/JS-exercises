@@ -3,6 +3,7 @@ const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
 
 function getGrade(input) {
+  var result = document.getElementById("result").innerHTML;
   input = document.getElementById("get").value;
   let grade = "";
   if (input == 100) {
@@ -18,15 +19,16 @@ function getGrade(input) {
   } else if (input >= 1 && input <= 59) {
     grade = "F";
   }
-  return (document.getElementById("result").innerHTML =
-    input + " is a " + grade + " grade");
+  return (result = input + " is a " + grade + " grade");
 }
 
 getGrade();
-let N = 5;
 
-for (i = 1; i <= N; i++) {
-  for (j = 1; j <= N; j = j * 2) {
-    console.log("hello");
+function hasPassingGrade(input) {
+  if (input == "F") {
+    console.log("false");
+  } else {
+    console.log("false");
   }
 }
+hasPassingGrade(getGrade);
