@@ -1,4 +1,16 @@
 // grade
+function getAverage(scores) {
+  let sum = 0;
+
+  for (const score of scores) {
+    sum += score;
+  }
+
+  console.log(sum / scores.length);
+}
+
+getAverage([45, 45, 6, 7, 67, 89]);
+
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
 
