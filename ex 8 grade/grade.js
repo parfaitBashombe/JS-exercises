@@ -35,6 +35,7 @@ function getGrade() {
 
   document.getElementById("result").innerHTML =
     input + " is a " + grade + " grade";
+  return grade;
 }
 
 function hasPassingGrade(input) {
