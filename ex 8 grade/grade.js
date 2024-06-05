@@ -2,9 +2,8 @@
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
 
-function getGrade(input) {
-  var result = document.getElementById("result").innerHTML;
-  input = document.getElementById("get").value;
+function getGrade() {
+  const input = document.getElementById("get").value;
   let grade = "";
   if (input == 100) {
     grade = "A++";
@@ -16,19 +15,22 @@ function getGrade(input) {
     grade = "C";
   } else if (input >= 60 && input <= 69) {
     grade = "D";
-  } else if (input >= 1 && input <= 59) {
+  } else if (input <= 59) {
     grade = "F";
+  } else {
+    grade = "A+++";
   }
-  return (result = input + " is a " + grade + " grade");
-}
 
-getGrade();
+  hasPassingGrade(grade);
+
+  document.getElementById("result").innerHTML =
+    input + " is a " + grade + " grade";
+}
 
 function hasPassingGrade(input) {
   if (input == "F") {
-    console.log("false");
+    console.log(false);
   } else {
-    console.log("false");
+    console.log(true);
   }
 }
-hasPassingGrade(getGrade);
