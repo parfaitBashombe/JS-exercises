@@ -1,16 +1,5 @@
 // grade
 
-//average
-function getAverage(scores) {
-  let sum = 0;
-
-  for (const score of scores) {
-    sum += score;
-  }
-
-  return sum / scores.length;
-} //end average
-
 //get grade
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
@@ -39,6 +28,18 @@ function getGrade() {
   document.getElementById("result").innerHTML =
     input + " is a " + grade + " grade";
 } //end get grade
+
+//average
+function getAverage(scores) {
+  let sum = 0;
+
+  for (const score of scores) {
+    sum += score;
+  }
+
+  return sum / scores.length;
+} //end average
+
 //has passing grade
 function hasPassingGrade(input) {
   if (input == "F") {
@@ -51,7 +52,7 @@ function hasPassingGrade(input) {
 //student message
 function studentMsg(totalScores, studentScore) {
   const average = getAverage(totalScores);
-  const score = getgrade(studentScore);
+  const score = getGrade(studentScore);
 
   if (hasPassingGrade(studentScore)) {
     return (
@@ -71,5 +72,5 @@ function studentMsg(totalScores, studentScore) {
     );
   }
 } //end student message
-console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
-console.log(studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100));
+studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37);
+studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100);
