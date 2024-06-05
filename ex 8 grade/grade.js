@@ -6,10 +6,8 @@ function getAverage(scores) {
     sum += score;
   }
 
-  console.log(sum / scores.length);
+  return sum / scores.length;
 }
-
-getAverage([45, 45, 6, 7, 67, 89]);
 
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
@@ -46,3 +44,28 @@ function hasPassingGrade(input) {
     console.log(true);
   }
 }
+
+function studentMsg(totalScores, studentScore) {
+  const average = getAverage(totalScores);
+  const score = getGrade(studentScore);
+
+  if (hasPassingGrade(studentScore)) {
+    return (
+      "Class average: " +
+      average +
+      ". Your grade: " +
+      score +
+      ". You passed the course."
+    );
+  } else {
+    return (
+      "Class average: " +
+      average +
+      ". Your grade: " +
+      score +
+      ". You failed the course."
+    );
+  }
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+console.log(studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100));
