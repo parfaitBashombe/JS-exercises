@@ -40,29 +40,30 @@ function getGrade(input) {
 
   console.log(hasPassingGrade());
   console.log(grade);
-  getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]);
-  getAverage([56, 23, 89, 42, 75, 11, 68, 34, 91, 19]);
 } //end get grade
 
 //student message
 function studentMsg(totalScores, studentScore) {
+  const average = getAverage(totalScores);
   const score = getGrade(studentScore);
-  totalScores = getAverage(scores);
+
   if (hasPassingGrade(studentScore)) {
-    console.log(
+    return (
       "Class average: " +
-        average +
-        ". Your grade: " +
-        score +
-        ". You passed the course."
+      average +
+      ". Your grade: " +
+      score +
+      ". You passed the course."
     );
   } else {
-    console.log(
+    return (
       "Class average: " +
-        average +
-        ". Your grade: " +
-        score +
-        ". You failed the course."
+      average +
+      ". Your grade: " +
+      score +
+      ". You failed the course."
     );
   }
 } //end student message
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+console.log(studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100));
