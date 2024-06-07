@@ -17,21 +17,23 @@ click.addEventListener("click", getGrade, studentMsg);
 const input = document.getElementById("get").value;
 
 function getGrade(input) {
+  let grade = "";
   if (input == 100) {
-    return "A++";
+    grade = "A++";
   } else if (input >= 90 && input <= 99) {
-    return "A";
+    grade = "A";
   } else if (input >= 80 && input <= 89) {
-    return "B";
+    grade = "B";
   } else if (input >= 70 && input <= 79) {
-    return "C";
+    grade = "C";
   } else if (input >= 60 && input <= 69) {
-    return "D";
+    grade = "D";
   } else if (input <= 59) {
-    return "F";
+    grade = "F";
   } else {
-    return "A+++";
+    grade = "A+++";
   }
+  return grade;
 } //end get grade
 
 //has passing grade
