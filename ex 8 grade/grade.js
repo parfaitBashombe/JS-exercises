@@ -14,7 +14,7 @@ function getAverage(scores) {
 //get grade
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade, studentMsg);
-let input = document.getElementById("get").value;
+const input = document.getElementById("get").value;
 
 function getGrade(input) {
   if (input == 100) {
@@ -60,4 +60,4 @@ function studentMsg(totalScores, studentScore) {
       ". You failed the course.";
   }
 } //end student message
-studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100);
+studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], input);
