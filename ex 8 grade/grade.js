@@ -26,7 +26,7 @@ function getAverage(scores) {
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
 
-function getGrade() {
+function getGrade(input) {
   input = document.getElementById("get").value;
   if (input == 100) {
     return "A++";
@@ -44,6 +44,7 @@ function getGrade() {
     return "A+++";
   }
 } //end get grade
+console.log(getGrade());
 
 //has passing grade
 function hasPassingGrade(input) {
