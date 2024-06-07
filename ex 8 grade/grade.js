@@ -14,10 +14,11 @@ function getAverage(scores) {
 //get grade
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade);
+let grade = "";
 
 function getGrade(input) {
   input = document.getElementById("get").value;
-  let grade = "";
+
   if (input == 100) {
     grade = "A++";
   } else if (input >= 90 && input <= 99) {
@@ -33,26 +34,27 @@ function getGrade(input) {
   } else {
     grade = "A+++";
   }
-  //has passing grade
-  function hasPassingGrade() {
-    return grade !== "F";
-  } //end passing grade
 
   console.log(hasPassingGrade());
   console.log(grade);
 } //end get grade
 
+//has passing grade
+function hasPassingGrade() {
+  return grade !== "F";
+} //end passing grade
+
 //student message
 function studentMsg(totalScores, studentScore) {
   const average = getAverage(totalScores);
-  const score = getGrade(studentScore);
+  const mark = getGrade(studentScore);
 
   if (hasPassingGrade(studentScore)) {
     return (
       "Class average: " +
       average +
       ". Your grade: " +
-      score +
+      mark +
       ". You passed the course."
     );
   } else {
@@ -60,7 +62,7 @@ function studentMsg(totalScores, studentScore) {
       "Class average: " +
       average +
       ". Your grade: " +
-      score +
+      mark +
       ". You failed the course."
     );
   }
