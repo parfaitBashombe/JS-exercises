@@ -2,6 +2,7 @@
 
 //average
 function getAverage(scores) {
+  scores = [56, 23, 89, 42, 75, 11, 68, 34, 91, 19];
   let sum = 0;
 
   for (const score of scores) {
@@ -12,8 +13,12 @@ function getAverage(scores) {
 } //end average
 
 //get grade
+const msg = document.getElementById("click");
+msg.addEventListener("click", studentMsg);
+
 const click = document.getElementById("click");
 click.addEventListener("click", getGrade, studentMsg);
+
 const input = document.getElementById("get").value;
 
 function getGrade(input) {
@@ -43,6 +48,7 @@ function hasPassingGrade(input) {
 
 //student message
 function studentMsg(totalScores, studentScore) {
+  studentScore = document.getElementById("get").value;
   const average = getAverage(totalScores);
   const mark = getGrade(studentScore);
 
@@ -62,4 +68,3 @@ function studentMsg(totalScores, studentScore) {
       ". You failed the course.";
   }
 } //end student message
-studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], input);
