@@ -51,7 +51,7 @@ function hasPassingGrade(input) {
 } //end passing grade
 
 //student message
-const result = document.getElementById("result");
+let result = "";
 
 function studentMsg(totalScores, studentScore) {
   studentScore = document.getElementById("get").value;
@@ -59,20 +59,19 @@ function studentMsg(totalScores, studentScore) {
   const average = getAverage(totalScores);
 
   if (hasPassingGrade(studentScore)) {
-    console.log(
+    result =
       "Class average: " +
-        average +
-        ". Your grade: " +
-        mark +
-        ". You passed the course."
-    );
+      average +
+      ". Your grade: " +
+      mark +
+      ". You passed the course.";
   } else {
-    console.log(
+    result =
       "Class average: " +
-        average +
-        ". Your grade: " +
-        mark +
-        ". You failed the course."
-    );
+      average +
+      ". Your grade: " +
+      mark +
+      ". You failed the course.";
   }
+  document.getElementById("result").innerHTML = result;
 } //end student message
