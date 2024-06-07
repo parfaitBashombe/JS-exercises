@@ -44,21 +44,21 @@ function getGrade(input) {
     return "A+++";
   }
 } //end get grade
-console.log(getGrade());
 
 //has passing grade
 function hasPassingGrade(input) {
   return getGrade(input) !== "F";
 } //end passing grade
-console.log(hasPassingGrade());
 
 //student message
+const result = document.getElementById("result");
+
 function studentMsg(totalScores, studentScore) {
   studentScore = document.getElementById("get").value;
   const mark = getGrade(studentScore);
   const average = getAverage(totalScores);
 
-  if (getAverage(totalScores)) {
+  if (hasPassingGrade(studentScore)) {
     console.log(
       "Class average: " +
         average +
@@ -71,7 +71,6 @@ function studentMsg(totalScores, studentScore) {
       "Class average: " +
         average +
         ". Your grade: " +
-        mark +
         mark +
         ". You failed the course."
     );
