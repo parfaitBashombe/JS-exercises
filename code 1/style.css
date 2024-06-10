@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  place-content: center;
+  margin: 0;
+  background-color: deepskyblue;
+  height: 100vh;
+}
+.wrapper::before {
+  content: "";
+  width: 120vmax;
+  height: 120vmax;
+  opacity: 0.4;
+  background: repeating-conic-gradient(from 0deg, white 0deg 15deg);
+  -webkit-mask-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 15%,
+    rgba(255, 255, 255, 0.7) 50%
+  );
+}
