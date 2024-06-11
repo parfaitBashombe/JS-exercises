@@ -50,7 +50,7 @@ function hasPassingGrade(input) {
   return getGrade(input) !== "F";
 } //end passing grade
 
-//student message
+//student messag
 let result = "";
 
 function studentMsg(totalScores, studentScore) {
