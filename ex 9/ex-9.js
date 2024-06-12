@@ -24,6 +24,7 @@ for (let i = fruits.length - 1; i >= 0; i--) {
 // => 1. orange
 // => 0. apple
 
+// Do...While statement
 x = 0;
 i = 0;
 
