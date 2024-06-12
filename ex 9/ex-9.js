@@ -6,3 +6,20 @@ console.log(veryNew);
 // => [ 3, 2, 1, 4 ]
 const modified = numbers.concat(newFirstNumber);
 console.log(modified);
+
+// loop javascript While
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+const fruits = ["apple", "orange", "banana"];
+
+for (let i = fruits.length - 1; i >= 0; i--) {
+  console.log(`${i}. ${fruits[i]}`);
+}
+
+// => 2. banana
+// => 1. orange
+// => 0. apple
