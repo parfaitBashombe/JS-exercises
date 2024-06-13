@@ -15,7 +15,7 @@ while (i < 5) {
 }
 
 // Reverse loop
-const fruits = ["apple", "orange", "banana"];
+const fruits = ["apple", "orange", "banana", "avocado"];
 
 for (let i = fruits.length - 1; i >= 0; i--) {
   console.log(`${i}. ${fruits[i]}`);
