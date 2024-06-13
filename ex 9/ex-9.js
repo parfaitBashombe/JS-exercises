@@ -86,3 +86,12 @@ for (let index in fruits) {
 for (let fruit of fruits) {
   console.log(fruit);
 }
+
+// functions assigned to variables
+let plusFive = (number) => {
+  return number + 5;
+};
+let f = plusFive;
+
+console.log(plusFive(3));
+console.log(f(9));
