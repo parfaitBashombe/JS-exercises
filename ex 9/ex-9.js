@@ -95,3 +95,24 @@ let f = plusFive;
 
 console.log(plusFive(3));
 console.log(f(9));
+
+// callback functions
+const isEven = (n) => {
+  return n % 2 == 0;
+};
+
+let printMsg = (evenFunc, num) => {
+  const isNumEven = evenFunc(num);
+  console.log(`${num} is an even number: ${isNumEven}.`);
+};
+
+printMsg(isEven, 4);
+
+// array method .reduce()
+const numberss = [1, 2, 3, 4];
+
+const sum = numberss.reduce((accumulator, curVal) => {
+  return accumulator + curVal;
+});
+
+console.log(sum);
