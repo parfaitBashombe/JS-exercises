@@ -81,3 +81,8 @@ for (let index in fruits) {
 // => 0
 // => 1
 // => 2
+
+// for..of loop
+for (let fruit of fruits) {
+  console.log(fruit);
+}
