@@ -65,3 +65,19 @@ for (i = 0; i < 10; i++) {
   text += "The number is " + i;
   console.log(text);
 }
+
+// nested
+for (let i = 0; i < 2; i += 1) {
+  for (let j = 0; j < 3; j += 1) {
+    console.log(`${i}-${j}`);
+  }
+}
+
+// for...in loop
+
+for (let index in fruits) {
+  console.log(index);
+}
+// => 0
+// => 1
+// => 2
