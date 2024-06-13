@@ -34,3 +34,24 @@ do {
   i++;
 } while (i < 5);
 // => 0 1 3 6 10
+
+// for loop
+for (let i = 0; i < 4; i++) {
+  console.log(i);
+}
+// => 0, 1, 2, 3
+
+// looping through arrays
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+// => Every item in the array
+
+// break
+for (let i = 0; i < 99; i++) {
+  if (i > 5) {
+    break;
+  }
+  console.log(i);
+}
+// => 0 1 2 3 4 5
