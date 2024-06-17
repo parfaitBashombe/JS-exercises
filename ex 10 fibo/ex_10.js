@@ -20,7 +20,6 @@ fib10 = [
   fibonacci(6),
   fibonacci(7),
   fibonacci(8),
-  fibonacci(9),
 ];
 console.log({ fibonacci: fib10 });
 
