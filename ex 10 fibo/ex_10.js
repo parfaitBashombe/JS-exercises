@@ -21,7 +21,6 @@ fib10 = [
   fibonacci(7),
   fibonacci(8),
   fibonacci(9),
-  fibonacci(10),
 ];
 console.log({ fibonacci: fib10 });
 
