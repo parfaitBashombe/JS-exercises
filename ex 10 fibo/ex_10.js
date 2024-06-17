@@ -29,8 +29,8 @@ const list = ["John", "Jules", "Elvis", "Martin", "Tony", "Jospin"];
 
 for (let i = 0; i < list.length; i++) {
   let result = list[i];
-  let n = "Jospin";
-  if (result == n) {
+  let name = "Jospin";
+  if (result == name) {
     console.log(`the location of ${result} is list.[${i}]`);
   } else {
     continue;
