@@ -29,10 +29,11 @@ const list = ["John", "Jules", "Elvis", "Martin", "Tony", "Jospin"];
 
 for (let i = 0; i < list.length; i++) {
   let result = list[i];
-  let name = "Jospin";
+  let name = "John";
   if (result == name) {
     console.log(`the location of ${result} is list.[${i}]`);
+    break;
   } else {
-    continue;
+    console.log("Does not exit");
   }
 }
