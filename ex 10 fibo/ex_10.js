@@ -37,3 +37,12 @@ for (let i = 0; i < list.length; i++) {
     console.log("Does not exit");
   }
 }
+
+let numbers = 32243;
+
+function reverseFunction() {
+  numbers += " ";
+  return numbers.split("").reverse().join("");
+}
+
+console.log(reverseFunction());
