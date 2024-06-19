@@ -46,3 +46,5 @@ function reverseFunction() {
 }
 
 console.log(reverseFunction());
+
+function binaryIn2(n) {}
