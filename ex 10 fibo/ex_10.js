@@ -48,12 +48,7 @@ function reverseFunction() {
 console.log(reverseFunction());
 
 function binaryIn2(n) {
-  let remnant = n % 2;
-  let result = n / 2;
-  if (remnant != 0 || remnant != 1) {
-    result / 2;
-  }
-  return result;
+  return Math.log2(n);
 }
 
 console.log(binaryIn2(25));
