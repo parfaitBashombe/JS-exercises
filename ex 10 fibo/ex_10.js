@@ -49,6 +49,11 @@ console.log(reverseFunction());
 
 function binaryIn2(n) {
   let result = 0;
+  result = n / 2;
+  while (result != 0 || result != 1) {
+    result /= 2;
+  }
+  return result;
 }
 
-console.log(binaryIn2(25));
+console.log(binaryIn2(20));
