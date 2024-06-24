@@ -1,10 +1,11 @@
 const char = "*";
-const space = "$".repeat(7);
+const space = " ";
 
 for (let i = 1; i < 7; i++) {
-  let printSpace = space;
+  let j = 7;
+  let printSpace = space.repeat(j - i);
   let print = char.repeat(i);
-  console.log(print);
+  console.log(printSpace + print);
 }
 
 var i;
