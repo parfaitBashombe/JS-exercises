@@ -1,6 +1,6 @@
 const char = "*";
 space = "";
-let jRows = 6;
+let jRows = 10;
 
 for (let i = 0; i < jRows; i++) {
   space += " ".repeat(jRows - i);
@@ -12,14 +12,23 @@ for (let i = 0; i < jRows; i++) {
   console.log(space);
 }
 //the pyramid grows in the console
-for (let i = 1; i <= jRows; i++) {
-  console.log(" ".repeat(jRows - i) + char.repeat(2 * i - 1));
-}
+function generateChristmasTree() {
+  for (let i = 1; i <= jRows; i++) {
+    console.log(" ".repeat(jRows - i) + char.repeat(2 * i - 1));
+  }
 
-// generate the steem
-for (let i = 0; i < 4; i++) {
-  console.log(" ".repeat(jRows - 3) + char.repeat(2 * 1 + 1));
+  // generate the steem
+  for (let i = 0; i < 4; i++) {
+    if (i == 1) {
+      console.log(" ".repeat(jRows - 2) + char.repeat(2 * 1 + 1));
+    } else if (i == 2) {
+      console.log(" ".repeat(jRows - 2) + char.repeat(2 * 1 + 1));
+    } else if (i == 3) {
+      console.log(" ".repeat(jRows - 2) + char.repeat(2 * 1 + 1));
+    }
+  }
 }
+generateChristmasTree();
 
 //generate pyramid
 function generatePyramid() {
