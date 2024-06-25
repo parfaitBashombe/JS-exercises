@@ -1,24 +1,13 @@
 const char = "*";
 space = "";
+let jRows = 6;
 
-for (let i = 1; i < 7; i++) {
-  let j = 6;
-  space += " ".repeat(j - i - 1);
+for (let i = 0; i < jRows; i++) {
+  space += " ".repeat(jRows - i - 1);
   // Add '*' for the current row
   space += char.repeat(2 * i + 1);
-  console.log(print);
-}
-
-var i;
-var j;
-for (i = 0; i <= 5; i++) {
-  document.write("</br>");
-  for (j = 0; j < 6 - i; j++) {
-    document.write("&nbsp&nbsp");
-  }
-  for (j = 6 - i; j <= 5; j++) {
-    document.write("*");
-  }
+  space += "\n";
+  console.log(space);
 }
 
 //generate pyramid
