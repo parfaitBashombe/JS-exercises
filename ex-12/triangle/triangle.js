@@ -1,11 +1,12 @@
 const char = "*";
-const space = " ";
+space = "";
 
 for (let i = 1; i < 7; i++) {
   let j = 6;
-  let printSpace = space.repeat(j - i);
-  let print = char.repeat(i);
-  console.log(printSpace + print);
+  space += " ".repeat(j - i - 1);
+  // Add '*' for the current row
+  space += char.repeat(2 * i + 1);
+  console.log(print);
 }
 
 var i;
