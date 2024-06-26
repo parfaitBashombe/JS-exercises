@@ -1,11 +1,17 @@
-// print even numbers from 0-10
+// print even numbers from 0-n
 function printEvenNumbers(number) {
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 0; i <= number; i++) {
     if (i % 2 == 0) {
-      console.log(i);
+      console.log({ even: i });
     }
   }
 }
-printEvenNumbers(10);
+printEvenNumbers(15);
 
-//
+//print table a multiplication
+function multiplicationTable(number) {
+  for (let i = 0; i <= 10; i++) {
+    console.log(`${number} * ${i} = ` + i * number);
+  }
+}
+multiplicationTable(3);
