@@ -11,7 +11,7 @@ printEvenNumbers(15);
 //print table a multiplication
 function multiplicationTable(number) {
   for (let i = 0; i <= 10; i++) {
-    console.log(`${number} * ${i} = ` + i * number);
+    console.log({ multi: `${number} * ${i} = ` + i * number });
   }
 }
 multiplicationTable(3);
