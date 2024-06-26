@@ -49,11 +49,11 @@ console.log({
 let array2 = [1, 12, 4, -6, -15, 8];
 function filterNegativeNumbers(filter) {
   const positiveArray = [];
-  for (array of filter) {
+  for (let i = 0; i < filter.length; i++) {
     // let index = filter.indexOf(array);?
-    if (array > 0) {
+    if (filter[i] > 0) {
       //   filter.splice(index, 1);
-      positiveArray.push(array);
+      positiveArray.push(filter[i]);
     }
   }
   console.log({ filter: positiveArray });
