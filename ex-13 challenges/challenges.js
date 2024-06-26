@@ -15,3 +15,9 @@ function multiplicationTable(number) {
   }
 }
 multiplicationTable(3);
+
+// length converter function km in miles
+function convertKmInMiles(length) {
+  return length * 0.621371;
+}
+console.log(convertKmInMiles(3));
