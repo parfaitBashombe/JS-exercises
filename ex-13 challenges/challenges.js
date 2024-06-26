@@ -24,7 +24,7 @@ function convertKmInMiles(length) {
 convertKmInMiles(3);
 
 //calculate the sum of numbers in a array
-let arrays = [1, 12, 4, -6, 15, 8];
+let arrays = [1, 12, 4, 6, 15, 8];
 let sum = 0;
 
 for (let i = 0; i < arrays.length; i++) {
@@ -46,13 +46,17 @@ console.log({
 });
 
 //function that filters out negative numbers
+let array2 = [1, 12, 4, -6, -15, 8];
 function filterNegativeNumbers(filter) {
+  const positiveArray = [];
   for (array of filter) {
-    let index = filter.indexOf(array);
-    if (array < 0) {
-      filter.splice(index, 1);
+    // let index = filter.indexOf(array);?
+    if (array > 0) {
+      //   filter.splice(index, 1);
+      positiveArray.push(array);
     }
   }
-  console.log(filter);
+  console.log({ filter: positiveArray });
+  return positiveArray;
 }
-filterNegativeNumbers(arrays);
+filterNegativeNumbers(array2);
