@@ -24,3 +24,10 @@ function convertKmInMiles(length) {
 convertKmInMiles(3);
 
 //calculate the sum of numbers in a array
+let array = [1, 12, 4, 6, 15, 8];
+let sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
+}
+console.log({ sum: sum });
