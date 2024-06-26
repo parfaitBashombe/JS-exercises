@@ -24,23 +24,35 @@ function convertKmInMiles(length) {
 convertKmInMiles(3);
 
 //calculate the sum of numbers in a array
-let array = [1, 12, 4, 6, 15, 8];
+let arrays = [1, 12, 4, -6, 15, 8];
 let sum = 0;
 
-for (let i = 0; i < array.length; i++) {
-  sum += array[i];
+for (let i = 0; i < arrays.length; i++) {
+  sum += arrays[i];
 }
 console.log({ sum: sum });
 
 //reverse an array
 function reverseArray(arrayToreverse) {
-  return arrayToreverse.reverse();
+  return arrayToreverse.toReversed();
 }
-console.log({ reversed: reverseArray(array) });
+console.log({ reversed: reverseArray(arrays) });
 
 // sort an array from the lowest to higest
 console.log({
-  sort: array.sort(function (a, b) {
+  sort: arrays.toSorted(function (a, b) {
     return a - b;
   }),
 });
+
+//function that filters out negative numbers
+function filterNegativeNumbers(filter) {
+  for (array of filter) {
+    let index = filter.indexOf(array);
+    if (array < 0) {
+      filter.splice(index, 1);
+    }
+  }
+  console.log(filter);
+}
+filterNegativeNumbers(arrays);
