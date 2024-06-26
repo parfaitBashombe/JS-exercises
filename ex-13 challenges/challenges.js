@@ -18,6 +18,9 @@ multiplicationTable(3);
 
 // length converter function km in miles
 function convertKmInMiles(length) {
-  return length * 0.621371;
+  let result = length * 0.621371;
+  console.log(`${length}km is ${result}  miles`);
 }
-console.log(convertKmInMiles(3));
+convertKmInMiles(3);
+
+//calculate the sum of numbers in a array
