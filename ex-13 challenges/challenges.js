@@ -36,4 +36,11 @@ console.log({ sum: sum });
 function reverseArray(arrayToreverse) {
   return arrayToreverse.reverse();
 }
-console.log(reverseArray(array));
+console.log({ reversed: reverseArray(array) });
+
+// sort an array from the lowest to higest
+console.log({
+  sort: array.sort(function (a, b) {
+    return a - b;
+  }),
+});
