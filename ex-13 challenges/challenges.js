@@ -74,4 +74,21 @@ console.log(school);
 console.log({ removed: removeSpaces(school) });
 
 // return true if a number is divisible by 10
-function divisibleByTen(number) {}
+function divisibleByTen(numbers) {
+  numbers = "" + numbers;
+  numbers.split("");
+  if (numbers[numbers.length - 1] == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log({ divisibleByten: divisibleByTen(20) });
+
+//function that finds the maximum number in array
+let arrayNumbers = [1, 34, 54, 67, 90, 192];
+
+function maximumNUmber(max) {
+  return Math.max(...max);
+}
+console.log(maximumNUmber(arrayNumbers));
