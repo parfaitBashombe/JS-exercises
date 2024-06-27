@@ -108,7 +108,7 @@ let str1 = "racecar";
 console.log(isPalindrome(str1));
 
 //check if a string is a palindrome
-let checkWord = "mr owl ate my metal wort";
+let checkWord = "mom";
 
 function palindromeCheck() {
   const originalWord = [];
@@ -117,7 +117,7 @@ function palindromeCheck() {
       originalWord.push(checkWord[i]);
     }
   }
-  reversedWord = originalWord.toReversed("");
+  const reversedWord = originalWord.toReversed("");
   console.log(originalWord);
   console.log(reversedWord);
   if (originalWord == reversedWord) {
@@ -127,3 +127,21 @@ function palindromeCheck() {
   }
 }
 console.log({ palindrome: palindromeCheck() });
+
+//pa
+function isPalindrome(str) {
+  str = str.replace(/[^\w\d]/g, "").toLowerCase();
+  const len = str.length;
+
+  for (let i = 0; i < len / 2; i++) {
+    if (str[i] !== str[len - 1 - i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama!"));
+console.log(isPalindrome("Mr. Owl Ate My Metal Worm"));
+console.log(isPalindrome("A Santa Lived As a Devil At NASA"));
