@@ -94,14 +94,36 @@ function maximumNUmber(max) {
 console.log({ max: maximumNUmber(arrayNumbers) });
 
 //check if a string is a palindrome
-let checkWord = "elu par cette crapule";
+let checkWord = "mr owl ate my metal worm";
 
 function palindromeCheck(palindrome) {
-  let stringRevesed = palindrome.split("").reverse("").join("");
-  if (stringRevesed == palindrome) {
-    return true;
-  } else {
-    return false;
+  let originalString = palindrome.split("");
+
+  //changing
+  const stringRevesed = [];
+  for (let i = 0; i < palindrome.length; i++) {
+    // let index = filter.indexOf(array);?
+    if (palindrome[i] != " ") {
+      //   filter.splice(index, 1);
+      stringRevesed.push(palindrome[i]);
+    }
   }
+  console.log(originalString);
+  console.log(stringRevesed);
+  return stringRevesed;
 }
-console.log(palindromeCheck(checkWord));
+console.log({ palindrome: palindromeCheck(checkWord) });
+
+//palindrome
+function isPalindrome(str) {
+  let j = str.length - 1;
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] != str[j]) {
+      return false;
+    }
+    j--;
+  }
+  return true;
+}
+let str1 = "racecar";
+console.log(isPalindrome(str1));
