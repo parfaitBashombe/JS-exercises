@@ -108,7 +108,7 @@ let str1 = "racecar";
 console.log(isPalindrome(str1));
 
 //check if a string is a palindrome
-let checkWord = "mom";
+let checkWord = "elu par cette crapule";
 
 function palindromeCheck() {
   const originalWord = [];
@@ -118,12 +118,14 @@ function palindromeCheck() {
     }
   }
   const reversedWord = originalWord.toReversed("");
-  console.log(originalWord);
-  console.log(reversedWord);
-  if (originalWord == reversedWord) {
-    return true;
-  } else {
-    return false;
+  /*   console.log(originalWord);
+  console.log(reversedWord); */
+  for (let j = 0; j <= originalWord.length; j++) {
+    if (originalWord[j] == reversedWord[j]) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 console.log({ palindrome: palindromeCheck() });
@@ -135,11 +137,11 @@ function isPalindrome(str) {
 
   for (let i = 0; i < len / 2; i++) {
     if (str[i] !== str[len - 1 - i]) {
-      return false;
+      return { palindromSimple: false };
     }
   }
 
-  return true;
+  return { palindromSimple: true };
 }
 
 console.log(isPalindrome("A man, a plan, a canal, Panama!"));
