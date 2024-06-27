@@ -120,12 +120,11 @@ function palindromeCheck(originalWord) {
   /*   console.log(originalWord);
   console.log(reversedWord); */
   for (let j = 0; j <= originalWord.length; j++) {
-    if (originalWord[j] == reversedWord[j]) {
-      return true;
-    } else {
+    if (originalWord[j] !== reversedWord[j]) {
       return false;
     }
   }
+  return true;
 }
 console.log({ palindrome: palindromeCheck(checkWord) });
 
