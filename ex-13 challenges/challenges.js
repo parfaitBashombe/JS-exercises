@@ -60,3 +60,17 @@ function filterNegativeNumbers(filter) {
   return positiveArray;
 }
 filterNegativeNumbers(array2);
+
+//remove the spaces found in a string
+let word = "hello dear you";
+let school = "dear student";
+function removeSpaces(stringToFilter) {
+  stringToFilter = stringToFilter.split(" ").join("");
+  return stringToFilter;
+}
+console.log(word);
+console.log(removeSpaces(word));
+console.log(school);
+console.log(removeSpaces(school));
+
+// return true if a number is divisible by 10
