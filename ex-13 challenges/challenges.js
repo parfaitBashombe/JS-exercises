@@ -69,8 +69,9 @@ function removeSpaces(stringToFilter) {
   return stringToFilter;
 }
 console.log(word);
-console.log(removeSpaces(word));
+console.log({ removed: removeSpaces(word) });
 console.log(school);
-console.log(removeSpaces(school));
+console.log({ removed: removeSpaces(school) });
 
 // return true if a number is divisible by 10
+function divisibleByTen(number) {}
