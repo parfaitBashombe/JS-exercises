@@ -91,4 +91,17 @@ let arrayNumbers = [1, 34, 54, 67, 90, 192];
 function maximumNUmber(max) {
   return Math.max(...max);
 }
-console.log(maximumNUmber(arrayNumbers));
+console.log({ max: maximumNUmber(arrayNumbers) });
+
+//check if a string is a palindrome
+let checkWord = "elu par cette crapule";
+
+function palindromeCheck(palindrome) {
+  let stringRevesed = palindrome.split("").reverse("").join("");
+  if (stringRevesed == palindrome) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(palindromeCheck(checkWord));
