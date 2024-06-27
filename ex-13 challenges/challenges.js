@@ -110,13 +110,12 @@ console.log(isPalindrome(str1));
 //check if a string is a palindrome
 let checkWord = "elu par cette crapule";
 
-function palindromeCheck() {
-  const originalWord = [];
-  for (let i = 0; i < checkWord.length; i++) {
-    if (checkWord[i] != " ") {
-      originalWord.push(checkWord[i]);
-    }
-  }
+function palindromeCheck(originalWord) {
+  originalWord = originalWord
+    .replace(/[^\w\d]/g, "")
+    .toLowerCase()
+    .split("");
+  //reverse the string
   const reversedWord = originalWord.toReversed("");
   /*   console.log(originalWord);
   console.log(reversedWord); */
@@ -128,7 +127,7 @@ function palindromeCheck() {
     }
   }
 }
-console.log({ palindrome: palindromeCheck() });
+console.log({ palindrome: palindromeCheck(checkWord) });
 
 //pa
 function isPalindrome(str) {
