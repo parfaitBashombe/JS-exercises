@@ -96,20 +96,7 @@ console.log({ max: maximumNUmber(arrayNumbers) });
 //check if a string is a palindrome
 let checkWord = "mr owl ate my metal worm";
 
-function palindromeCheck(palindrome) {
-  let originalString = palindrome.split(" ").join("");
-
-  //changing
-  let stringRevesed = [];
-  for (let i = 0; i < palindrome.length; i++) {
-    //push in the array
-    stringRevesed.push(palindrome[i]);
-  }
-  stringRevesed += "" + stringRevesed.split("");
-  console.log(originalString);
-  console.log(stringRevesed);
-  return stringRevesed;
-}
+function palindromeCheck(originalWord) {}
 console.log({ palindrome: palindromeCheck(checkWord) });
 
 //palindrome
