@@ -74,3 +74,74 @@ console.log(school);
 console.log({ removed: removeSpaces(school) });
 
 // return true if a number is divisible by 10
+function divisibleByTen(numbers) {
+  numbers = "" + numbers;
+  numbers.split("");
+  if (numbers[numbers.length - 1] == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log({ divisibleByten: divisibleByTen(20) });
+
+//function that finds the maximum number in array
+let arrayNumbers = [1, 34, 54, 67, 90, 192];
+
+function maximumNUmber(max) {
+  return Math.max(...max);
+}
+console.log({ max: maximumNUmber(arrayNumbers) });
+
+//palindrome
+function isPalindrome(str) {
+  let j = str.length - 1;
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] != str[j]) {
+      return false;
+    }
+    j--;
+  }
+  return true;
+}
+let str1 = "racecar";
+console.log(isPalindrome(str1));
+
+//check if a string is a palindrome
+let checkWord = "elu par cette crapule";
+
+function palindromeCheck(originalWord) {
+  originalWord = originalWord
+    .replace(/[^\w\d]/g, "")
+    .toLowerCase()
+    .split("");
+  //reverse the string
+  const reversedWord = originalWord.toReversed("");
+  /*   console.log(originalWord);
+  console.log(reversedWord); */
+  for (let j = 0; j <= originalWord.length; j++) {
+    if (originalWord[j] !== reversedWord[j]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log({ palindrome: palindromeCheck(checkWord) });
+
+//pa
+function isPalindrome(str) {
+  str = str.replace(/[^\w\d]/g, "").toLowerCase();
+  const len = str.length;
+
+  for (let i = 0; i < len / 2; i++) {
+    if (str[i] !== str[len - 1 - i]) {
+      return { palindromSimple: false };
+    }
+  }
+
+  return { palindromSimple: true };
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama!"));
+console.log(isPalindrome("Mr. Owl Ate My Metal Worm"));
+console.log(isPalindrome("A Santa Lived As a Devil At NASA"));
