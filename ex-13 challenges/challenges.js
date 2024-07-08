@@ -127,3 +127,21 @@ function palindromeCheck(originalWord) {
   return true;
 }
 console.log({ palindrome: palindromeCheck(checkWord) });
+
+//pa
+function isPalindrome(str) {
+  str = str.replace(/[^\w\d]/g, "").toLowerCase();
+  const len = str.length;
+
+  for (let i = 0; i < len / 2; i++) {
+    if (str[i] !== str[len - 1 - i]) {
+      return { palindromSimple: false };
+    }
+  }
+
+  return { palindromSimple: true };
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama!"));
+console.log(isPalindrome("Mr. Owl Ate My Metal Worm"));
+console.log(isPalindrome("A Santa Lived As a Devil At NASA"));
