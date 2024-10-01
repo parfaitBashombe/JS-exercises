@@ -23,6 +23,15 @@ fib10 = [
 ];
 console.log({ fibonacci: fib10 });
 
+//fib
+let i;
+const fibb=[0,1];
+
+for(i=2;i<=19;i++){
+  fibb[i]=fibb[i-1]+fibb[i-2]  
+console.log(fib[i])
+}
+
 //find name
 
 const list = ["John", "Jules", "Elvis", "Martin", "Tony", "Jospin"];
