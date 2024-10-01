@@ -30,7 +30,7 @@ const list = ["John", "Jules", "Elvis", "Martin", "Tony", "Jospin"];
 for (let i = 0; i < list.length; i++) {
   let result = list[i];
   let name = "John";
-  if (result == name) {
+  if (result === name) {
     console.log(`the location of ${result} is list.[${i}]`);
     break;
   } else {
@@ -41,8 +41,7 @@ for (let i = 0; i < list.length; i++) {
 let numbers = 32243;
 
 function reverseFunction() {
-  numbers += " ";
-  return numbers.split("").reverse().join("");
+  return numbers.toString().split("").reverse().join("");
 }
 
 console.log(reverseFunction());
